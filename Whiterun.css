@@ -1,0 +1,195 @@
+/* Written by Jared Bruett, Edited by Max Walters */
+
+/* Navigation Bar by Max Walters */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: gray;
+}
+
+li a.active {
+    background-color: firebrick;
+}
+
+/* CSS Written by Jared Bruett & Max Walters*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.district {
+    max-width: 50%;
+    height: auto;
+}
+
+img.map {
+    max-width: 50%;
+    height: auto;
+    padding: 25px;
+}
+
+img.history {
+    max-width: 50%;
+    height: auto;
+    padding-top: 25px;
+}
+
+h1 {
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-style: bold;
+    margin-top: 50px;
+}
+
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif; 
+}
+
+#div2 {
+    width: 75%;
+    font-size: 20px;
+    padding: 10px;
+    margin: 2px;
+}
+
+html, body {
+    height: auto;
+
+}
+
+#footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #333;
+  text-align: center;
+}
+
+#footertext {
+    color: white;
+}
+
+body {
+	font-size: 1.05em;
+	line-height: 1.25em;
+	font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #dbdbdb;
+}
+
+a.normallink {
+    color: lightgrey;
+}
+
+p.paragraph {
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+a.footerlink {
+    color: gray;
+    text-decoration: none;
+}
+
+a.footerlink:hover {
+    color: white;
+    text-decoration: none;
+    background: #333;
+}
+
+a:link {
+    background-color: none;
+}
+
+a:visited {
+    background-color: none;
+}
+
+a:hover {
+    background-color: grey;
+}
+
+a:active {
+    background-color: grey;
+} 
+
+/* FAQ Page */
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+}
+
+/* Contact Page */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+p.formsubmit {
+    text-align: center;
+    font-size: 25px;
+}

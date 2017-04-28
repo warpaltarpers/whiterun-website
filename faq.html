@@ -1,0 +1,116 @@
+<!-- Written by Maxwell Walters -->
+<!-- Header by Maxwell Walters -->
+<!doctype html>
+<html lang="en">
+    
+<head>
+	<meta charset="utf-8">
+	<title>The City of Whiterun</title>
+	<link rel="shortcut icon" href="images/whiterunhorse.png">
+    <link rel="stylesheet" type="text/css" href="Whiterun.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button.accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #ddd; 
+        }
+
+        button.accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+        }
+
+        button.accordion.active:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
+
+        div.panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        }  
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="districts.html">Districts</a></li>
+            <li><a href="real%20estate.html">Real Estate</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li style="float:right"><a class="active" href="faq.html">FAQ</a></li>
+            <li style="float:right"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- End Header -->
+    <!-- FAQ Accordion -->
+    <br>
+    <center><h2>Frequently Asked Questions</h2></center>
+    <center><img class="history" src="images/12110-1-1330891004.jpg"></center><br>
+    <button class="accordion">What does the Dovahzul of Whiterun translate to?</button>
+    <div class="panel">
+      <p>In the language of dragons, Dovahzul, Whiterun translates to "Hill-of-the-Dragons".</p>
+    </div>
+
+    <button class="accordion">What is Whiterun's allegiance?</button>
+    <div class="panel">
+      <p>Initially, Jarl Balgruuf claims that he has yet to decide who to join in the Civil War, making the city of Whiterun neutral, although he does claim to owe a favor to General Tullius, to whom he seems indebted. Balgruuf also suggests he owes a favor to Ulfric Stormcloak. There are however several indicators that suggest Whiterun is leaning more towards the Empire.</p>
+    </div>
+
+    <button class="accordion">The Companions have their Skyrim headquarters in Whiterun. Are they werewolves?</button>
+    <div class="panel">
+      <p>Although a popular belief, there is no evidence of lycanthropy in the history of The Companions.</p>
+    </div>
+    
+    <button class="accordion">What is Gildergreen?</button>
+    <div class="panel">
+      <p>In the center of Whiterun stand Gildergreen, a tree born from the branches of the Eldergleam. It is revered by the followers of Kynareth, which is why Whiterun has Skyrim's only Temple of Kynareth.</p>
+    </div>
+
+    <button class="accordion">Are there previous adventurers that are a part of the Whiterun guard?</button>
+    <div class="panel">
+      <p>Yes, they used to be adventurers, but then they took arrows to their knees.</p>
+    </div>
+    
+    <!-- Javascript for FAQ (Milestone #2) Maxwell Walters -->
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      }
+    }
+    </script><br><br><br><br><br><br><br>
+    <!-- Footer -->
+    <div id="footer">
+    <p id="footertext"><b>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank" class="footerlink">wiki </a></b></p>
+    </div>
+</body>
+</html>
