@@ -8,61 +8,39 @@
 	<title>The City of Whiterun</title>
 	<link rel="shortcut icon" href="images/whiterunhorse.png">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <link rel="stylesheet" type="text/css" href="Whiterun.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="Whiterun.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="districts.html">Districts</a></li>
-            <li><a href="real%20estate.html">Real Estate</a></li>
-            <li><a href="map.html">Map</a></li>
-            <li style="float:right"><a href="faq.html">FAQ</a></li>
-            <li style="float:right"><a href="contact.html">Contact Us</a></li>
-            <li style="float:right"><a class="active" href="team.html">Team</a></li>
-        </ul>
-    </nav>
-    <!-- End Header -->
-    <!-- Team Part -->
     <div data-role="page" id="home">
-    	<header data-role="header">
+        <header data-role="header">
+            <a href="#" class="ui-btn" data-rel="back">Go Back</a>
         	<h1>Development Team</h1>
     	</header>
-    
-    	<section data-role="content">
-			<div class="content-primary">
-				<ul data-role="listview" data-split-icon="gear" data-inset="true" data-filter="true"> 
-                	<li>
-                    	<a href="#">
-                    		<h3>Max Walters</h3>
-                    		<p>Max Walters is a freshman Interactive Media Studies major with a double minor in Computer Science and Graphic Design.</p>
-                    	</a>
-                	</li>
-                	<li>
-                    	<a href="#">
-                    		<h3>David Dabney</h3>
-                    		<p>David Dabney is a sophomore Interactive Media Studies major.</p>
-                    	</a>
-                	</li>
-
-                	<li>
-                    	<a href="#">
-                    		<h3>Jared Bruett</h3>
-                    		<p>Jared Bruett is a junior Interactive Media Studies and English: Creative Writing double major.</p>
-                    	</a>
-                	</li>
-            	</ul>
+    	<section data-role="content"> 
+		  <section data-role="collapsible-set"> 
+			<div data-role="collapsible" data-collapsed="true">
+                <h3>Max Walters</h3>
+            	<h4>Team Leader</h4>
+            	<p>Max Walters is a freshman Interactive Media Studies major with a double minor in Computer Science and Graphic Design.</p>
 			</div>
+		
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>David Dabney</h3>
+            	<h4>Team Member</h4>
+            	<p>David Dabney is a sophomore Interactive Media Studies major.</p>
+			</div>
+		
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Jared Bruett</h3>
+            	<h4>Team Member</h4>
+            	<p>Jared Bruett is a junior Interactive Media Studies and English: Creative Writing double major.</p>
+			</div>
+			</section>
     	</section>
-    
-    	<footer data-role="footer">
-        	<p id="footertext"><b>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank" class="footerlink">wiki </a></b></p>
-    	</footer>
 	</div>
 </body>
 </html>
