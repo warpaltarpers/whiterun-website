@@ -7,8 +7,11 @@
 	<meta charset="utf-8">
 	<title>The City of Whiterun</title>
 	<link rel="shortcut icon" href="images/whiterunhorse.png">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="Whiterun.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -26,39 +29,40 @@
     </nav>
     <!-- End Header -->
     <!-- Team Part -->
-    <h3>Contact Form</h3>
+    <div data-role="page" id="home">
+    	<header data-role="header">
+        	<h1>Development Team</h1>
+    	</header>
+    
+    	<section data-role="content">
+			<div class="content-primary">
+				<ul data-role="listview" data-split-icon="gear" data-inset="true" data-filter="true"> 
+                	<li>
+                    	<a href="#">
+                    		<h3>Max Walters</h3>
+                    		<p>Max Walters is a freshman Interactive Media Studies major with a double minor in Computer Science and Graphic Design.</p>
+                    	</a>
+                	</li>
+                	<li>
+                    	<a href="#">
+                    		<h3>David Dabney</h3>
+                    		<p>David Dabney is a sophomore Interactive Media Studies major.</p>
+                    	</a>
+                	</li>
 
-    <div class="container">
-      <form action="contactSUBMIT.html">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your first name">
-
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name">
-
-        <label for="hold">Hold</label>
-        <select id="hold" name="hold">
-            <option value="dawnstar">Dawnstar</option>
-            <option value="falkreath">Falkreath</option>
-            <option value="markarth">Markarth</option>
-            <option value="morthal">Morthal</option>
-            <option value="riften">Riften</option>
-            <option value="solitude">Solitude</option>
-            <option value="whiterun">Whiterun</option>
-            <option value="windhelm">Windhelm</option>
-            <option value="winterhold">Winterhold</option>
-            <option value="other">Other/Foreign</option>
-        </select>
-
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something to us..." style="height:200px"></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <div id="footer">
-    <p id="footertext"><b>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank" class="footerlink">wiki </a></b></p>
-    </div>
-
+                	<li>
+                    	<a href="#">
+                    		<h3>Jared Bruett</h3>
+                    		<p>Jared Bruett is a junior Interactive Media Studies and English: Creative Writing double major.</p>
+                    	</a>
+                	</li>
+            	</ul>
+			</div>
+    	</section>
+    
+    	<footer data-role="footer">
+        	<p id="footertext"><b>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank" class="footerlink">wiki </a></b></p>
+    	</footer>
+	</div>
 </body>
 </html>
