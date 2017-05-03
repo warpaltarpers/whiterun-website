@@ -1,0 +1,63 @@
+<!-- Written by Maxwell Walters -->
+<!-- Header by Maxwell Walters -->
+<!doctype html>
+<html lang="en">
+    
+<head>
+	<meta charset="utf-8">
+	<title>The City of Whiterun</title>
+	<link rel="shortcut icon" href="images/whiterunhorse.png">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        $(window).on('load resize',function(){
+            if($(window).width() >= 800){
+                window.location.href = "contact.html"
+            }
+        }); 
+    </script>
+</head>
+<body>
+    <div data-role="page" data-inset="true">
+
+        <header data-role="header">
+            <h1>Contact Us</h1>
+            <a href="#" class="ui-btn" data-rel="back">Go Back</a>
+        </header>
+        
+          <section data-role="content" data-inset="true">
+            <label for="fullname">Full name:</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Firstname Lastname">
+
+            <fieldset data-role="controlgroup">
+                <legend for="hold">Select Your Hold of Residence</legend>
+                    <select name="hold" id="hold">
+                        <option value="dawnstar">Dawnstar</option>
+                        <option value="falkreath">Falkreath</option>
+                        <option value="markarth">Markarth</option>
+                        <option value="morthal">Morthal</option>
+                        <option value="riften">Riften</option>
+                        <option value="solitude">Solitude</option>
+                        <option value="whiterun">Whiterun</option>
+                        <option value="windhelm">Windhelm</option>
+                        <option value="winterhold">Winterhold</option>
+                        <option value="other">Other/Foreign</option>
+                    </select>   
+            </fieldset>
+
+            <label for="info">Your message:</label>
+            <textarea name="message" id="message" placeholder="Write something to us..."></textarea>
+            
+            <input type="submit" data-inline="true" value="Submit">
+          </section>
+
+        <div data-role="footer">
+            <h1>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank">wiki </a></h1>
+        </div>
+
+    </div>
+</body>
+</html>
