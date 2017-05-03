@@ -35,33 +35,55 @@
     <!-- Contact Form -->
     <h3>Contact Form</h3>
 
-    <div class="container">
-      <form action="contactSUBMIT.html">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your first name">
+        <form id="myform">
+            <label for="field">First Name: </label>
+            <input type="text" class="left" id="field" name="field">
+            <br/>
+            <label for="field2">Last Name: </label>
+            <input type="text" class="left" id="field" name="field">
+            <br/>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name">
-
-        <label for="hold">Hold</label>
-        <select id="hold" name="hold">
-            <option value="dawnstar">Dawnstar</option>
-            <option value="falkreath">Falkreath</option>
-            <option value="markarth">Markarth</option>
-            <option value="morthal">Morthal</option>
-            <option value="riften">Riften</option>
-            <option value="solitude">Solitude</option>
-            <option value="whiterun">Whiterun</option>
-            <option value="windhelm">Windhelm</option>
-            <option value="winterhold">Winterhold</option>
-            <option value="other">Other/Foreign</option>
-        </select>
-
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something to us..." style="height:200px"></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
+            <label for="hold">Please select a Hold</label>
+                <select id="hold" name="hold" title="Please select something!">
+                <option value="">Select...</option>
+                <option value="1">Dawnstar</option>
+                <option value="2">Falkreath</option>
+                <option value="3">Markarth</option>
+                <option value="5">Morthal</option>
+                <option value="6">Riften</option>
+                <option value="7">Solitude</option>
+                <option value="8">Whiterun</option>
+                <option value="9">Windhelm</option>
+                <option value="10">Winterhold</option>
+                </select>
+            <label for="field2">Subject: </label>
+            <input type="text" class="left" id="field" name="field">
+            <br/>
+            <input type="submit" value="Validate!">
+        </form>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script>
+            // just for the demos, avoids form submit
+            jQuery.validator.setDefaults({
+              debug: true,
+              success: "valid"
+            });
+            $( "#myform" ).validate({
+              rules: {
+                field: {
+                  required: true
+                },
+                hold: {
+                  required: true
+                },
+                field2: {
+                  required: true
+                }
+              }
+            });
+        </script>
     </div>
     <div id="footer">
     <p id="footertext"><b>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank" class="footerlink">wiki </a></b></p>

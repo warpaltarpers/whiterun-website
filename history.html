@@ -10,6 +10,15 @@
     <link rel="stylesheet" type="text/css" href="Whiterun.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
 </head>
 <body>
     <nav>
@@ -25,13 +34,23 @@
         </ul>
     </nav>
     <!-- End Header -->
-    <center><img class="history" src="images/Courtyard.jpg"></center>
     <h1><center>History</center></h1>
-    <h2><center>Merethic Era</center></h2>
-    <p class="paragraph">Whiterun is located on the eastern end of its Hold, in the tundra plains that fill the center of Skyrim. It was founded by Jeek of the River, who was the captain of Jorrvaskr. Upon discovery of the <a href="http://elderscrolls.wikia.com/wiki/Skyforge">Skyforge</a>, he and his men constructed the great mead hall of Jorrvaskr, which at the time was the sole structure on the bluff. Now, Whiterun is a large city, albeit one that retains the feel of a smaller Nord village. The central location and easy access make it one of the most successful cities in trade.</p>
-    <center><img class="history" src="images/-2137834734.jpg"></center>
-    <h2><center>First Era</center></h2>
-    <p class="paragraph">When approaching Whiterun, the towering fortress of Dragonsreach dominates the view. Its history can be traced back to the First Era, when King Olaf One-Eye subdued the great dragon Numinex in a legendary duel of Thu'um atop Mount Anthor and brought him back to the fledgling town as a captive. It was then that the magnificent keep was rebuilt and renamed to serve as a cage for Numinex, whose head still adorns the Great Hall. Gjalund was the Jarl of Whiterun sometime in the First Era. As Jarl, his holdings included Whiterun, <a href="http://elderscrolls.wikia.com/wiki/Granite_Hill">Granite Hill</a>, <a href="http://elderscrolls.wikia.com/wiki/Rorikstead">Rorikstead</a>, <a href="http://elderscrolls.wikia.com/wiki/Old_H%27roldan">Old H'roldan</a>, <a href="http://elderscrolls.wikia.com/wiki/Bromjunaar">Bromjunaar</a>, <a href="http://elderscrolls.wikia.com/wiki/Korvanjund">Korvanjund</a>, <a href="http://elderscrolls.wikia.com/wiki/Volunruud">Volunruud</a> and <a href="http://elderscrolls.wikia.com/wiki/Ivarstead_(Skyrim)">Ivarstead</a>.</p><br><br><br>
+    <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Merethic Era</a></li>
+    <li><a href="#tabs-2">First Era</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Whiterun is located on the eastern end of its Hold, in the tundra plains that fill the center of Skyrim. It was founded by Jeek of the River, who was the captain of Jorrvaskr. Upon discovery of the <a href="http://elderscrolls.wikia.com/wiki/Skyforge">Skyforge</a>, he and his men constructed the great mead hall of Jorrvaskr, which at the time was the sole structure on the bluff. Now, Whiterun is a large city, albeit one that retains the feel of a smaller Nord village. The central location and easy access make it one of the most successful cities in trade.</p>
+      <center><img class="history" src="images/-2137834734.jpg"></center></p>
+  </div>
+  <div id="tabs-2">
+    <p>When approaching Whiterun, the towering fortress of Dragonsreach dominates the view. Its history can be traced back to the First Era, when King Olaf One-Eye subdued the great dragon Numinex in a legendary duel of Thu'um atop Mount Anthor and brought him back to the fledgling town as a captive. It was then that the magnificent keep was rebuilt and renamed to serve as a cage for Numinex, whose head still adorns the Great Hall. Gjalund was the Jarl of Whiterun sometime in the First Era. As Jarl, his holdings included Whiterun, <a href="http://elderscrolls.wikia.com/wiki/Granite_Hill">Granite Hill</a>, <a href="http://elderscrolls.wikia.com/wiki/Rorikstead">Rorikstead</a>, <a href="http://elderscrolls.wikia.com/wiki/Old_H%27roldan">Old H'roldan</a>, <a href="http://elderscrolls.wikia.com/wiki/Bromjunaar">Bromjunaar</a>, <a href="http://elderscrolls.wikia.com/wiki/Korvanjund">Korvanjund</a>, <a href="http://elderscrolls.wikia.com/wiki/Volunruud">Volunruud</a> and <a href="http://elderscrolls.wikia.com/wiki/Ivarstead_(Skyrim)">Ivarstead</a>.</p>
+      <center><img class="history" src="images/Courtyard.jpg"></center>
+  </div>
+
+</div>
+
     
     <div id="footer">
     <p id="footertext"><b>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank" class="footerlink">wiki </a></b></p>
