@@ -1,7 +1,6 @@
 <!-- Written by Maxwell Walters -->
 <!-- Header by Maxwell Walters -->
-<!-- JavaScript Image Swap by Jared Bruett -->
-<!-- This Javascript is complete except for the animation. -->
+<!-- jQuery Image Swap by Max Walters-->
 <!doctype html>
 <html lang="en">
     
@@ -10,36 +9,37 @@
 	<title>The City of Whiterun</title>
 	<link rel="shortcut icon" href="images/whiterunhorse.png">
     <link rel="stylesheet" type="text/css" href="Whiterun.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="jquery.slides.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script>
-           var $ = function (id) {return document.getElementById(id); }
-             window.onload = function () {
-                var imageLinks = $("image_list").getElementsByTagName("a");
-
-                // Process image links
-                for ( i = 0; i < imageLinks.length; i++ ) {
-                    var linkNode = imageLinks[i];
-
-                    // Attach event handler
-                     linkNode.onclick = function (evt) {
-                      var link = this;          
-                      $("image").src = link.getAttribute("href");
-                      $("caption").firstChild.nodeValue = link.getAttribute("title");
-
-
-                         // Cancel the default action of the event
-                        if (!evt) { evt = window.event; }
-                        if(evt.preventDefault) {evt.preventDefault();}
-                        else {evt.returnValue = false;} 
-                    } 
-                    // Preload image
-                    var image = new Image();
-                    image.src = linkNode.getAttribute("href");}
-                    $("first_link").focus();
-            }
+        $(function(){
+            $("#slides").slidesjs({
+                width: 800,
+                height: 388,
+                navigation: {
+                    active: false
+                },
+                play: {
+                  active: false,
+                  effect: "slide",
+                  interval: 5000,
+                  auto: true,
+                  swap: true,
+                  pauseOnHover: false,
+                  restartDelay: 2500
+                }
+            });
+        });
     </script>
+    <style>
+        /* Prevents slides from flashing */
+        #slides {
+          display:none;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -57,25 +57,22 @@
     <!-- End Header -->
     
     <center><h1>Districts</h1>
+        <div id="slides">
+            <img src="images/The_Plains_District_Whiterun_Skyrim.png">
+            <img src="images/The_Wind_District_Whiterun_Skyrim_1.png">
+            <img src="images/The_Cloud_District_Whiterun_Skyrim.png">
+        </div> <br>
         
-         <ul id="image_list">
-	        <li><a href="images/The_Plains_District_Whiterun_Skyrim.png"  title="The Plains District" id="first_link">
-	        	<img src="images/The_Plains_District_Whiterun_Skyrim.png" width =60px height=40px alt=""></a></li>
-	        <li><a href="images/The_Wind_District_Whiterun_Skyrim_1.png" title="The Wind District">
-	        	<img src="images/The_Wind_District_Whiterun_Skyrim_1.png" width =60px height=40px alt=""></a></li>
-	        <li><a href="images/The_Cloud_District_Whiterun_Skyrim.png" title="The Cloud District">
-	        	<img src="images/The_Cloud_District_Whiterun_Skyrim.png" width =60px height=40px alt=""></a></li>
-	    </ul>
-        
-        <h2 id="caption">The Plains District</h2>         
-	    <p><img src="images/The_Plains_District_Whiterun_Skyrim.png" width =500px height=300px alt="" id="image">
-         </p>
-        
+        <h2 id="caption">The Plains District</h2>
         <p class="paragraph">The Plains District is the first district any visitor to Whiterun enters, so named because it is the lowest of the three and therefore closest to the plains outside the city. It contains all the major merchants, the marketplace and Breezehome.</p> 
         
+        <h2 id="caption">The Wind District</h2>
         <p class="paragraph">The Wind District is where most of Whiterun's residential buildings (including the mead hall Jorrvaskr and the Gildergreen) are located and was named because of the strong mountain winds that gust through the area.</p>
         
-        <p class="paragraph">The Cloud District is the smallest of Whiterun’s three districts. It was so named because it is located atop the bluff Whiterun was built on and is therefore closer to the clouds than any other. It is dominated by the imposing form of Dragonsreach.</p> <br><br><br>
+        <h2 id="caption">The Cloud District</h2>
+        <p class="paragraph">The Cloud District is the smallest of Whiterun’s three districts. It was so named because it is located atop the bluff Whiterun was built on and is therefore closer to the clouds than any other. It is dominated by the imposing form of Dragonsreach.</p>
+        
+        <br><br><br><br><br><br>
     
     <div id="footer">
     <p id="footertext"><b>Learn more at our <a href="http://elderscrolls.wikia.com/wiki/Whiterun_(Skyrim)" target="_blank" class="footerlink">wiki </a></b></p>
